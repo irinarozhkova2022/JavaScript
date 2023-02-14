@@ -77,14 +77,17 @@ if (btn.classList.contains('btn-secondary')) {
 
 // 3. Необходимо удалить класс "dropdown-menu" у элемента, у которого 
 // присутствует класс "menu".
+document.querySelector('.menu').classList.remove('dropdown-menu');
 
 
 // 4. У элемента с id "dropdownMenuButton" замените id на "superDropdown".
-
+document.getElementById('dropdownMenuButton').id = 'superDropdown';
 
 // 5. Добавьте атрибут data-dd со значением 3 элементу у которого 
 // существует атрибут "aria-labelledby" равный "dropdownMenuButton" 
 // используя dataset.
-
+document.querySelector('[aria-labelledby="dropdownMenuButton"]')
+    .dataset.dd = "3";
 
 // 6. Удалите атрибут type у элемента с классом "dropdown-toggle".
+document.querySelector('.dropdown-toggle').removeAttribute('type');
